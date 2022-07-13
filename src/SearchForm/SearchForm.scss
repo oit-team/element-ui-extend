@@ -1,0 +1,105 @@
+$form-item-height: 36px;
+$label-padding-right: 10px;
+
+.search-form {
+  position: relative;
+  padding: 8px 0;
+  border: 1px solid #eeeeee;
+  border-radius: 0.5rem;
+
+  .el-form {
+    display: grid;
+    overflow: auto;
+    flex: 1;
+    max-height: calc($form-item-height * 3 + 20px); // 表单项高度3倍+间距
+    padding: 0 8px;
+    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .el-form-item {
+    margin-bottom: 0;
+  }
+
+  .el-form-item__content {
+    display: flex;
+  }
+
+  .el-form-item__label {
+    line-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    min-width: calc(4em + $label-padding-right);
+    height: 100%;
+  }
+
+  .el-input {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .el-input__prefix, .el-input__suffix, i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .el-range__close-icon {
+    position: absolute;
+    right: 5px;
+  }
+
+  // 自适应宽度
+  .el-date-editor, .el-select, .el-cascader {
+    flex: 1;
+  }
+
+  .search-action {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    white-space: nowrap
+  }
+
+  .search-collapse {
+    font-size: 1.125rem;
+    position: absolute;
+    z-index: 10;
+    right: 8px;
+    bottom: 1px;
+    padding: 0 4px;
+    cursor: pointer;
+    user-select: none;
+    transform: translateY(100%);
+    border: 1px solid #eeeeee;
+    border-top: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: #ffffff;
+  }
+
+  .el-form-item__label {
+    padding-right: $label-padding-right;
+  }
+
+  .search-action__button {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+  }
+}
+
+// 折叠样式
+.search-form.search-form--collapsed {
+  display: flex;
+
+  .el-form {
+    overflow: hidden;
+    height: $form-item-height;
+  }
+
+  .search-action {
+    margin-top: 0;
+    margin-right: 8px;
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "name": "@oit/element-ui-expand",
-  "version": "0.1.0",
+  "name": "@oit/element-ui-extend",
+  "version": "0.2.0",
   "description": "element ui 高阶组件",
   "main": "index.js",
   "author": "qiuxu <inlinger@outlook.com>",

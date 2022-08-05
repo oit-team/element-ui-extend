@@ -1,6 +1,6 @@
 {
   "name": "@oit/element-ui-extend",
-  "version": "0.2.1",
+  "version": "0.3.0-beta.0",
   "description": "element ui 高阶组件",
   "main": "index.js",
   "author": "qiuxu <inlinger@outlook.com>",
@@ -15,9 +15,11 @@
     "index.js"
   ],
   "devDependencies": {
+    "element-ui": "^2.15.9",
     "lodash": "^4.17.21",
     "sass": "^1.53.0",
-    "sass-loader": "^13.0.2"
+    "sass-loader": "^13.0.2",
+    "vue": "2.7"
   },
   "publishConfig": {
     "registry": "http://192.168.9.16:4873"

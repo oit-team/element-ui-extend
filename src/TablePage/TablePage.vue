@@ -156,7 +156,10 @@ export default {
     auto: Boolean,
     search: Object,
     // 数据加载后自动更新布局
-    autoLayout: Boolean,
+    autoLayout: {
+      type: Boolean,
+      default: true,
+    },
   },
 
   data: () => ({

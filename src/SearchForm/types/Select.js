@@ -11,13 +11,16 @@ export default {
     const { provideForm } = ctx.injections
     const {
       item,
+      custom,
     } = ctx.props
 
-    const options = typeof item.fieldAttr === 'object'
+    const getItemOptions = () => typeof item.fieldAttr === 'object'
       ? item.fieldAttr
       : item.fieldAttr
         ? JSON.parse(item.fieldAttr)
         : []
+
+    const options = custom.options || getItemOptions()
 
     const optionsRender = options.map(option => {
       return h(Option, {

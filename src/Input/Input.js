@@ -19,8 +19,11 @@ export default defineComponent({
   }),
 
   watch: {
-    value() {
-      this.updateValue(this.value)
+    value: {
+      immediate: true,
+      handler() {
+        this.updateValue(this.value)
+      },
     },
   },
 

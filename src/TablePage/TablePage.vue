@@ -191,10 +191,10 @@ export default {
     },
   },
 
-  async created() {
+  created() {
     Object.assign(this.innerPager, this.pager)
 
-    this.setFields(await this.$options.setFields())
+    this.setFields(this.$options.setFields())
   },
 
   mounted() {

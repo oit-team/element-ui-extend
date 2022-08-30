@@ -29,7 +29,7 @@ $label-padding-right: 10px;
     line-height: 0;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     min-width: calc(4em + $label-padding-right);
     height: 100%;
   }

@@ -1,8 +1,7 @@
-import { defineComponent } from 'vue'
 import { Input } from 'element-ui'
 import { formatNumber } from '../utils/helper'
 
-export default defineComponent({
+export default {
   name: 'VcInput',
 
   inheritAttrs: false,
@@ -60,4 +59,4 @@ export default defineComponent({
       },
     })
   },
-})
+}

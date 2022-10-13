@@ -183,6 +183,12 @@ export default {
     'pager.total': function (value) {
       this.innerPager.total = value
     },
+    queryData: {
+      deep: true,
+      handler() {
+        this.innerPager.index = 1
+      },
+    },
   },
 
   computed: {

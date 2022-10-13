@@ -36,6 +36,7 @@
       border
       height="100%"
       :highlight-current-row="table.selectionItem"
+      :row-key="table.rowKey"
       @selection-change="handleSelectionChange"
       @current-change="handleCurrentChange"
       @row-click="$emit('row-click', $event)"
@@ -54,6 +55,7 @@
       <el-table-column
         v-if="table.selection"
         :selectable="table.selectable"
+        :reserve-selection="table.reserveSelection"
         align="center"
         type="selection"
         width="50"
@@ -149,6 +151,9 @@ export default {
         selection: false,
         // 开启单选
         selectionItem: false,
+        rowKey: undefined,
+        // 分页时保留已选，需要配置rowKey
+        reserveSelection: false,
       }),
     },
     pager: Object,

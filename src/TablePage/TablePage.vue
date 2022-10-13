@@ -183,12 +183,6 @@ export default {
     'pager.total': function (value) {
       this.innerPager.total = value
     },
-    queryData: {
-      deep: true,
-      handler() {
-        this.innerPager.index = 1
-      },
-    },
   },
 
   computed: {
@@ -267,15 +261,16 @@ export default {
       this.$message[tipsType](tips || defaultTips)
     },
     handleQuery(e) {
+      this.innerPager.index = 1
       this.queryData = e
       this.loadData()
     },
     handleReset(e) {
+      this.innerPager.index = 1
       this.queryData = e
       this.loadData()
     },
     handleSelectionChange(e) {
-      // console.log(e);
       this.selected = e
       this.$emit('selection-change', e)
     },

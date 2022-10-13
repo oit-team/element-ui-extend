@@ -3,7 +3,7 @@
   "version": "0.3.3",
   "description": "element ui 高阶组件",
   "main": "index.js",
-  "author": "qiuxu <inlinger@outlook.com>",
+  "author": "qiuxu <uxuip@outlook.com>",
   "license": "MIT",
   "peerDependencies": {
     "element-ui": "^2.15.9",

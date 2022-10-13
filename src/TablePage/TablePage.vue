@@ -342,6 +342,13 @@ export default {
     doLayout() {
       this.$nextTick(this.$refs.table.doLayout)
     },
+    /**
+     * 重置表单
+     * @public
+     */
+    resetForm() {
+      this.$refs.search.reset()
+    },
   },
 }
 </script>

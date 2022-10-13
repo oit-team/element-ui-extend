@@ -125,6 +125,7 @@
 
 <script>
 import SearchForm from '../SearchForm'
+import { registerRefMethods } from '../utils/helper'
 
 const ROW_ACTION_TYPES = {
   DELETE: 'delete',
@@ -209,6 +210,7 @@ export default {
   },
 
   methods: {
+    ...registerRefMethods('table', ['clearSelection']),
     initLoad() {
       this.$refs.search.query()
     },

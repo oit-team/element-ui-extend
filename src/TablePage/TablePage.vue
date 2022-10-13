@@ -177,8 +177,6 @@ export default {
       size: 20,
       total: 0,
     },
-    // 多选结果
-    selected: [],
     // 单选结果
     selectedItem: {},
     loading: false,
@@ -193,6 +191,10 @@ export default {
   computed: {
     tableFields() {
       return this.innerFields.filter(item => !item.noTableShow)
+    },
+    // 多选结果
+    selected() {
+      return this.$refs.table.selection
     },
   },
 
@@ -276,7 +278,6 @@ export default {
       this.loadData()
     },
     handleSelectionChange(e) {
-      this.selected = e
       this.$emit('selection-change', e)
     },
     handleCurrentChange(e) {

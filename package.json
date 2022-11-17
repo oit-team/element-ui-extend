@@ -16,7 +16,7 @@
   ],
   "devDependencies": {
     "element-ui": "^2.15.9",
-    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
     "vue": "2.7"

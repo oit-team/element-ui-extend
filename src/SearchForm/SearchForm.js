@@ -7,7 +7,7 @@ import Cascader from './types/Cascader'
 import FIELD_TYPES from './types/FIELD_TYPES'
 
 import './SearchForm.scss'
-import { debounce } from 'lodash'
+import { debounce } from 'lodash-es'
 
 let h = null
 

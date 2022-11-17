@@ -1,4 +1,4 @@
-import TablePage from './TablePage'
+import TablePage from './TablePage.vue'
 
 TablePage.install = function (Vue, options) {
   if (typeof options.setFields === 'function') {

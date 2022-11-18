@@ -62,3 +62,7 @@ export function formatNumber(
 
   return value.replace(regExp, '')
 }
+
+export function genSlots(createElement, slots) {
+  return Object.keys(slots).map(key => createElement('template', { slot: key }, slots[key]))
+}

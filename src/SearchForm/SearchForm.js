@@ -53,7 +53,7 @@ export default {
       },
     },
     fieldFiltered() {
-      return this.fields.filter(item => item.noSearchShow !== true)
+      return this.fields.filter(item => !item.noSearchShow)
     },
   },
 

@@ -166,6 +166,7 @@ export default {
       type: Boolean,
       default: true,
     },
+    fields: Array,
   },
 
   data: () => ({
@@ -186,6 +187,9 @@ export default {
   watch: {
     'pager.total': function (value) {
       this.innerPager.total = value
+    },
+    fields() {
+      this.setFields(this.fields)
     },
   },
 

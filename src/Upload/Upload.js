@@ -129,7 +129,6 @@ export default {
      * @param {object} option 请求配置
      */
     async uploadChunk(option) {
-      debugger
       const upload = this.$refs.uploadCore
       const rawFile = option.file
       const chunkSize = this.chunkSize * 1024

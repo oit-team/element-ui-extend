@@ -365,7 +365,6 @@ export default {
   },
 
   render(h) {
-    console.log(this.$attrs, this.$props)
     const {
       action,
       limit,

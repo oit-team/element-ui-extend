@@ -1,4 +1,4 @@
-import MD5 from 'crypto-js/md5'
+import MD5 from 'md5'
 
 // 图片尺寸限制
 const UPLOAD_IMAGE_SIZE_MAX = 2000

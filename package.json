@@ -23,5 +23,8 @@
   },
   "publishConfig": {
     "registry": "http://192.168.9.16:4873"
+  },
+  "dependencies": {
+    "md5": "^2.3.0"
   }
 }

@@ -1,5 +1,6 @@
-import MD5 from 'md5'
+import * as crypto from 'crypto-js'
 
+const MD5 = crypto.MD5
 // 图片尺寸限制
 const UPLOAD_IMAGE_SIZE_MAX = 2000
 // 压缩率
@@ -178,24 +179,31 @@ function getFileTypeNumber(type) {
 
 // 提供一些实用内容，与公共内容区分开
 export const mixin = {
+  data: () => ({
+    fileListFormatted: [],
+  }),
   props: {
     fileKeyMap: {
       type: Object,
       default: getFileItemDefault,
     },
   },
-  computed: {
-    fileListFormatted() {
-      return this.fileList.map((fileItem) => {
-        return Object
-          .entries(this.fileKeyMap)
-          .reduce((item, [key, mapKey]) => {
-            item[key] = fileItem[mapKey]
-            return item
-          }, {
-            _data: fileItem,
-          })
-      })
+  watch: {
+    fileList: {
+      deep: true,
+      immediate: true,
+      handler() {
+        this.fileListFormatted = this.fileList.map((fileItem) => {
+          return Object
+            .entries(this.fileKeyMap)
+            .reduce((item, [key, mapKey]) => {
+              item[key] = fileItem[mapKey]
+              return item
+            }, {
+              _data: fileItem,
+            })
+        })
+      },
     },
   },
   methods: {

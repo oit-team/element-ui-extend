@@ -167,6 +167,10 @@ export default {
       default: true,
     },
     fields: Array,
+    autoSet: {
+      type: Boolean,
+      default: true,
+    },
   },
 
   data: () => ({
@@ -203,10 +207,10 @@ export default {
     },
   },
 
-  created() {
+  async created() {
     Object.assign(this.innerPager, this.pager)
 
-    this.setFields(this.$options.setFields())
+    this.autoSet && this.$options.setFields.call(this, this.setFields)
   },
 
   mounted() {
